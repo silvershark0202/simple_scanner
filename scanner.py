@@ -1,7 +1,5 @@
 #!/bin/python
 import sys
-import socket
-from datetime import datetime
 
 
 if len(sys.argv) == 2:
@@ -11,11 +9,6 @@ else:
     print("syntax: python3 scanner.py <ip>")
     sys.exit()
     
-
-print("-" * 50)
-print(f"scanning target {target}")
-print("time : " + str(datetime.now()))
-print("-" * 50)
 
 try:
     for port in range(50, 1000):
@@ -36,5 +29,5 @@ except socket.gaierror:
     sys.exit()
     
 except socket.error:
-    print("Cannot connect to server")
+    print("Gagal menghubungkan ke server")
     sys.exit()
