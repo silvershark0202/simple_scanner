@@ -1,6 +1,6 @@
 #!/bin/python
 import sys
-
+import socket
 
 if len(sys.argv) == 2:
     target = socket.gethostbyname(sys.argv[1])
